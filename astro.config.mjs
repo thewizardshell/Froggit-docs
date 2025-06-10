@@ -6,7 +6,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Git Terminal UI Made Simple',
+			title: 'The Terminal TUI for Git Mastery',
 			customCss: ['./src/styles/custom.css'],
 			logo:{
 				src: './src/assets/froggit-icon-text.png',
