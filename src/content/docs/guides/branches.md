@@ -1,15 +1,41 @@
 ---
 title: Branch View
-description: Switch branches with ease.
+description: Switch, create, and delete branches easily.
 ---
 
-The **Branch View** helps you see all local branches and switch between them easily.
+This view displays all local branches in the current Git repository.
 
-- The current branch is marked with a `●` symbol.
-- Use the cursor to highlight a branch to switch to.
+- The current branch is indicated with a `●` symbol.
+- You can navigate, switch, create, and delete branches from here.
+
+## Current Branch
+
+The current branch is shown at the top, for example:
+
+```
+
+current branch: master
+
+```
+
+## Branch List
+
+Shows all local branches, with the current branch marked:
+
+```
+
+● master
+
+```
 
 ## Controls
 
-- `↑/↓`: Navigate branches.
-- `Enter`: Switch to the selected branch.
-- `Esc`: Return to File View.
+- `↑ / ↓` — Navigate through the branch list.
+- `Enter` — Switch to the selected branch.
+- `n` — Create a new branch.
+- `d` — Delete the selected branch (cannot delete the current branch).
+- `Esc` — Return to the File View.
+
+---
+
+This view allows for efficient branch management within the TUI.

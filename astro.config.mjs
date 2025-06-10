@@ -22,6 +22,13 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
+					label: "Introduction",
+					items: [
+						{ label: 'Introduction', slug: 'guides/introduction' },
+						{ label: 'Philosophy', slug: 'guides/philosophy' },
+					],
+				},
+				{
 					label: 'Getting Started',
 					items: [
 						{ label: 'Install Froggit', slug: 'guides/install' },
