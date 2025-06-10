@@ -43,7 +43,3 @@ This page provides a clear overview of the commands, keyboard shortcuts, and int
 - **Branch View:** Select branches to switch to.
 - **Remote View:** View and manage remote repositories.
 - **Add Remote View:** Add new remote repositories.
-
-## Further Reading
-
-- Read more about [the Diátaxis Reference](https://diataxis.fr/reference/).
