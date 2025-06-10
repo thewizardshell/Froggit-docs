@@ -11,7 +11,7 @@ Follow these steps to install Froggit on your system:
 
 ### 1. Download the latest release
 
-Visit the [Releases page](https://github.com/your-username/froggit/releases) and download the binary for your operating system.
+Visit the [Releases page](https://github.com/thewizardshell/froggit/releases) and download the binary for your operating system.
 
 - **Linux/macOS**:
   ```bash
