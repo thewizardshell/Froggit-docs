@@ -102,3 +102,75 @@ header.header {
     opacity: 1;
   }
 }
+
+/* ... Todo tu CSS original arriba ... */
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+  [data-has-hero] .hero img {
+    width: 350px;
+  }
+
+  .site-title img {
+    width: 120px;
+    height: 120px;
+  }
+
+  [data-has-hero] .hero::before {
+    background-size: 30px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  [data-has-hero] .hero img {
+    width: 250px;
+  }
+
+  .site-title img {
+    width: 100px;
+    height: 100px;
+  }
+
+  [data-has-hero] .hero::before {
+    background-size: 25px 25px;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-content {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  [data-has-hero] .hero img {
+    width: 180px;
+  }
+
+  .site-title img {
+    width: 80px;
+    height: 80px;
+  }
+
+  [data-has-hero] .hero::before {
+    background-size: 20px 20px;
+  }
+
+  .card {
+    padding: 0.75rem;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  .card-content {
+    font-size: 0.9rem;
+  }
+}
