@@ -1,78 +1,85 @@
-/* Grid background variables and styles */
-:root[data-theme='light'] {
+:root[data-theme="light"] {
   --grid-bg: #ffffff;
   --grid-lines: #e6e6e6;
 }
 
-:root[data-theme='dark'] {
+:root[data-theme="dark"] {
   --grid-bg: #13151a;
   --grid-lines: #252837;
 }
-/* Remover grid del hero para evitar duplicados */
+
 [data-has-hero] .hero {
   background: transparent;
   position: relative;
 }
 
-/* Grid de fondo de pantalla completa */
 [data-has-hero] .hero::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: var(--grid-bg);
-  background-image: 
+  background-image:
     linear-gradient(var(--grid-lines) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-lines) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: -2;
 }
 
-/* Gradiente de pantalla completa superpuesto con animación */
 [data-has-hero] .hero::after {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: linear-gradient(
-    135deg,                       /* Cambiado a 135 grados */
-    rgba(37, 38, 46, 0.7) 0%,    /* Color base en la esquina inferior derecha */
-    rgba(37, 38, 46, 0.7) 30%,   /* Extender el color base */
-    rgba(16, 156, 74, 0.3) 50%,  /* Verde en la esquina superior derecha */
-    rgba(0, 0, 0, 0.5) 90%,      /* Transición a negro */
-    rgba(0, 0, 0, 1) 100%        /* Negro completo */
+    135deg,
+    rgba(37, 38, 46, 0.7) 0%,
+    rgba(37, 38, 46, 0.7) 30%,
+    rgba(16, 156, 74, 0.3) 50%,
+    rgba(0, 0, 0, 0.5) 90%,
+    rgba(0, 0, 0, 1) 100%
   );
   z-index: -1;
   opacity: 0;
   animation: fadeIn 1s ease-out forwards;
 }
-/* Tamaño de la imagen del hero */
+
+@keyframes heroImageEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 [data-has-hero] .hero img {
   width: 450px;
   height: auto;
+  opacity: 0;
+  animation: heroImageEntrance 3s ease-out forwards;
 }
-
-/* Navbar transparente con efecto blur */
 header.header {
   background: var(--sl-color-bg-nav);
   border-bottom: 1px solid rgba(var(--sl-color-gray-5), 0.2);
 }
-.site-title img{
-  width: 150px ;
+
+.site-title img {
+  width: 150px;
   height: 150px;
 }
 
-/* Transparent navbar only for the index/home page */
 [data-has-hero] header.header {
   background: rgba(var(--sl-color-bg-nav), 0.3) !important;
   backdrop-filter: blur(1px);
 }
 
-/* Estilos para las cards */
 .card {
   background: var(--sl-color-bg-nav);
   border: 1px solid rgba(var(--sl-color-gray-5), 0.3);
@@ -85,7 +92,6 @@ header.header {
   border-color: rgba(16, 156, 74, 0.5);
 }
 
-/* Si las cards tienen algún título o contenido interno */
 .card-title {
   color: var(--sl-color-white);
   font-weight: 600;
@@ -103,9 +109,6 @@ header.header {
   }
 }
 
-/* ... Todo tu CSS original arriba ... */
-
-/* Estilos responsivos */
 @media (max-width: 1024px) {
   [data-has-hero] .hero img {
     width: 350px;
