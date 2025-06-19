@@ -49,6 +49,12 @@ export default defineConfig({
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
+				{
+					label: 'Roadmap',
+					items:[
+						{ label: 'Roadmap', slug: 'roadmap/roadmap' },
+					]
+				}
 			],
 		}),
 	],

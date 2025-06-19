@@ -1,66 +1,83 @@
 ---
 title: Install Froggit
-description: How to install Froggit on your system.
+description: Learn how to install Froggit, a terminal-based Git assistant, on your system.
 ---
 
-Froggit is a terminal-based Git assistant written in Go that makes staging, committing, pushing, and switching branches easier and more interactive.
+**Froggit** is a terminal-based Git assistant written in Go. It offers a modern and interactive interface to perform common Git tasks such as staging, committing, pushing, and managing branches — all from your terminal.
 
-## Installation
+## 🚀 Installation
 
-Follow these steps to install Froggit on your system:
+You can install Froggit in two main ways: by downloading a release binary or building it from source.
 
-### 1. Download the latest release
+### Download the Latest Release (Recommended for most users)
 
-Visit the [Releases page](https://github.com/thewizardshell/froggit/releases) and download the binary for your operating system.
+1. Go to the [Releases page](https://github.com/thewizardshell/froggit/releases).
+2. Download the binary for your operating system.
+3. Follow the steps below based on your OS:
 
-- **Linux/macOS**:
-  ```bash
-  chmod +x froggit
-  sudo mv froggit /usr/local/bin
-
-* **Windows**:
-  Download the `.exe` file and optionally add it to your PATH.
-
-### 2. Using `go install` (for developers)
-
-You can also install Froggit directly from the source if you have Go installed:
+#### ▸ Linux / macOS
 
 ```bash
-go install github.com/your-username/froggit@latest
+chmod +x froggit
+sudo mv froggit /usr/local/bin
 ```
 
-Make sure your `$GOPATH/bin` (or `$HOME/go/bin`) is in your `PATH` to use the `froggit` command globally.
+This makes `froggit` available globally from your terminal.
 
-### 3. Verify installation
+#### ▸ Windows
+
+* Download the `froggit.exe` file.
+* (Optional) Add the folder containing `froggit.exe` to your **System PATH** to run it from any terminal.
+
+
+---
+
+### ✅ Verify Installation
 
 Once installed, run:
 
 ```bash
-froggit --help
+froggit -help
 ```
 
-You should see a list of available commands and options.
+If installed correctly, this will display a list of available commands and options.
 
-## Requirements
+---
 
-* Go 1.20 or newer (if building from source)
-* Git must be installed and available in your system `PATH`
-* **Nerd Fonts** installed on your system (required for icon rendering and better aesthetics)
+## ⚙️ Requirements
 
-## Recommended Terminal Setup (Optional)
+* [Go](https://golang.org/dl/) **1.20 or newer** (required only for building from source)
+* `git` must be installed and accessible from your terminal
+* **Nerd Fonts** installed on your system (required for icon rendering and improved UI)
 
-For the best experience and visual appearance, it is **recommended** to use terminals that support Nerd Fonts and have good Unicode rendering, such as:
+---
+
+## 💡 Recommended Terminal Setup
+
+To get the most out of Froggit’s visual interface, use a terminal that supports:
+
+* Unicode symbols
+* Nerd Fonts
+
+### Suggested Terminals
 
 * [WezTerm](https://wezfurlong.org/wezterm/)
 * [Alacritty](https://github.com/alacritty/alacritty)
+* [Kitty](https://sw.kovidgoyal.net/kitty/)
+* [Windows Terminal](https://github.com/microsoft/terminal) (with font config)
 
-### Configuring Fonts in VSCode Terminal
+---
 
-If you use VSCode's integrated terminal, configure it to use a Nerd Font to properly display icons:
+### 👨‍💻 Configuring Nerd Fonts in VSCode Terminal
 
-1. Open VSCode settings (`Ctrl+,` or `Cmd+,`).
+If you're using the integrated terminal in VSCode:
+
+1. Open Settings (`Ctrl+,` or `Cmd+,`).
 2. Search for `terminal.integrated.fontFamily`.
-3. Set it to a Nerd Font installed on your system, for example:
-   `"CaskaydiaCove Nerd Font", "Fira Code Nerd Font", "MesloLGS NF", monospace`
+3. Set it to a Nerd Font you have installed, for example:
 
-> Note: Using Nerd Fonts and these recommended terminals is optional but significantly improves the UI experience.
+```json
+"CaskaydiaCove Nerd Font", "Fira Code Nerd Font", "MesloLGS NF", monospace
+```
+
+> Nerd Fonts are optional, but highly recommended to see all icons and UI elements as intended.
