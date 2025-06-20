@@ -11,7 +11,7 @@ You can install Froggit in two main ways: by downloading a release binary or run
 
 ### Option 1: Use the Installer Script (Recommended)
 
-##▸ Linux / macOS
+## ▸ Linux / macOS
 
 Run the following commands in your terminal:
 
