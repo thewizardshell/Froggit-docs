@@ -3,93 +3,58 @@ title: Install Froggit
 description: Learn how to install Froggit, a terminal-based Git assistant, on your system.
 ---
 
-**Froggit** is a terminal-based Git assistant written in Go. It offers a modern and interactive interface to perform common Git tasks such as staging, committing, pushing, and managing branches all from your terminal.
 
-## Installation
+## System Requirements
 
-You can install Froggit in two main ways: by downloading a release binary or running the platform-specific installer script.
+Before installing Froggit, ensure your system meets the following requirements:
 
-### Option 1: Use the Installer Script (Recommended)
+- `git` installed and available in your terminal
+- **Nerd Fonts** installed (recommended for full UI support)
+- **[Go ≥ 1.20](https://golang.org/dl/)** only if building from source
+- Optional: [GitHub CLI (`gh`)](https://cli.github.com/) for GitHub integration
 
-## ▸ Linux / macOS
+> If GitHub CLI is installed and authenticated (`gh auth login`), Froggit will detect and use it automatically for repository management.
 
-Run the following commands in your terminal:
+---
+
+## Installation Options
+
+### Option 1: Install via Script (Recommended)
+
+#### Linux / macOS
 
 ```bash
 curl -s https://raw.githubusercontent.com/thewizardshell/froggit/master/scripts/install.sh | bash
-chmod +x install.sh
-./install.sh
 ````
 
-This script will download the latest Froggit release, confirm installation, and install it in `/usr/local/bin` or another suitable location.
+> This script will download the latest Froggit binary and install it into `/usr/local/bin` or another appropriate location.
 
-#### ▸ Windows (PowerShell)
+#### Windows (PowerShell)
 
-Open PowerShell **as Administrator** (recommended) and run:
+Run PowerShell as Administrator and execute:
 
 ```powershell
 iwr https://raw.githubusercontent.com/thewizardshell/froggit/master/scripts/install.ps1 -UseBasicParsing | iex
-.\install.ps1
 ```
 
-The script will guide you through the installation, check permissions, download the latest release, and optionally add Froggit to your system PATH.
+The script handles download, installation, and optionally adds Froggit to your system PATH.
 
 ---
 
-### Option 2: Download the Latest Release Manually
+### Option 2: Manual Download
 
-1. Go to the [Releases page](https://github.com/thewizardshell/froggit/releases).
-2. Download the binary for your operating system.
-3. Place the executable in a folder included in your system PATH, or move it to a directory like `/usr/local/bin` (Linux/macOS) or a suitable folder in Windows.
+1. Visit the [Releases page](https://github.com/thewizardshell/froggit/releases).
+2. Download the latest binary for your platform.
+3. Move the executable to a directory in your system’s `PATH`, such as:
 
----
-
-## Verify Installation
-
-After installing, run:
-
-```bash
-froggit -help
-```
-
-You should see a list of available commands and options.
+   * `/usr/local/bin` (Linux/macOS)
+   * A folder like `C:\Program Files\tools\` (Windows)
 
 ---
 
-## Requirements
+### Option 3: Build from Source
 
-* [Go](https://golang.org/dl/) **1.20 or newer** (only if you plan to build from source)
-* `git` installed and accessible in your terminal
-* **Nerd Fonts** installed (optional but recommended for best UI experience)
-
----
-
-## Recommended Terminal Setup
-
-To enjoy Froggit's UI fully, use a terminal with Unicode and Nerd Font support:
-
-* [WezTerm](https://wezfurlong.org/wezterm/)
-* [Alacritty](https://github.com/alacritty/alacritty)
-* [Kitty](https://sw.kovidgoyal.net/kitty/)
-* [Windows Terminal](https://github.com/microsoft/terminal) (configure with Nerd Fonts)
-
----
-
-### Configuring Nerd Fonts in VSCode Terminal
-
-If using VSCode’s integrated terminal:
-
-1. Open Settings (`Ctrl+,` or `Cmd+,`).
-2. Search for `terminal.integrated.fontFamily`.
-3. Set it to a Nerd Font you have installed, e.g.:
-
-```json
-"CaskaydiaCove Nerd Font", "Fira Code Nerd Font", "MesloLGS NF", monospace
-```
-
----
-
-If you prefer building from source, clone the repo and run:
+If you prefer building manually:
 
 ```bash
 git clone https://github.com/thewizardshell/froggit.git
@@ -98,4 +63,39 @@ go mod tidy
 go build
 ```
 
-Place the resulting executable in your PATH.
+Copy the resulting binary to a location in your `PATH`.
+
+---
+
+## Verifying Installation
+
+Once installed, verify by running:
+
+```bash
+froggit -help
+```
+
+You should see a list of supported commands and options.
+
+---
+
+## Recommended Terminal Setup
+
+Froggit’s UI is optimized for terminals with Unicode and Nerd Font support. Recommended terminals include:
+
+* [WezTerm](https://wezfurlong.org/wezterm/)
+* [Alacritty](https://github.com/alacritty/alacritty)
+* [Kitty](https://sw.kovidgoyal.net/kitty/)
+* [Windows Terminal](https://github.com/microsoft/terminal)
+
+### Using Nerd Fonts in VSCode Terminal
+
+If using VSCode:
+
+1. Open settings (`Ctrl+,` or `Cmd+,`)
+2. Search for `terminal.integrated.fontFamily`
+3. Set it to a Nerd Font you've installed, for example:
+
+```json
+"CaskaydiaCove Nerd Font", "MesloLGS NF", monospace
+```

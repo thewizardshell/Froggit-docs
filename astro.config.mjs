@@ -17,8 +17,14 @@ export default defineConfig({
 				{
 					icon: 'github',
 					label: 'GitHub',
-					href: 'https://github.com/thewizardshell/froggit' // puedes cambiarlo por tu repo real
+					href: 'https://github.com/thewizardshell/froggit'
+				},
+				{
+					icon: 'document',
+					label:'Roadmap',
+					href: '/roadmap',
 				}
+
 			],
 			sidebar: [
 				{
@@ -49,12 +55,6 @@ export default defineConfig({
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
-				{
-					label: 'Roadmap',
-					items:[
-						{ label: 'Roadmap', slug: 'roadmap/roadmap' },
-					]
-				}
 			],
 		}),
 	],
