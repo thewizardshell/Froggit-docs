@@ -1,41 +1,37 @@
 ---
 title: Branch View
-description: Switch, create, and delete branches easily.
+description: Switch, create, and delete branches.
 ---
 
-This view displays all local branches in the current Git repository.
-
-- The current branch is indicated with a `●` symbol.
-- You can navigate, switch, create, and delete branches from here.
+The Branch View displays all local branches in your repository. Open it by pressing `b` from the File View.
 
 ## Current Branch
 
-The current branch is shown at the top, for example:
+The current branch is shown at the top of the Froggit interface at all times. Inside the Branch View, the active branch is marked with a bullet symbol.
 
-```
+## Switching Branches
 
-current branch: master
+Navigate the branch list with the arrow keys and press `Enter` to switch to the selected branch. Froggit updates the file status and branch display after the switch.
 
-```
+## Creating a Branch
 
-## Branch List
+Press `n` to open the New Branch input. Type the name for your new branch and press `Enter` to create it. Press `Esc` to cancel.
 
-Shows all local branches, with the current branch marked:
+## Deleting a Branch
 
-```
+Press `d` on the selected branch to delete it. A confirmation dialog appears asking you to confirm. Press `y` to proceed or `n` to cancel. You cannot delete the branch you are currently on.
 
-● master
+## Related Operations
 
-```
+For merging branches, see [Merge](/advanced/merge/). For rebasing, see [Rebase](/advanced/rebase/). Both are accessible through [Advanced Mode](/advanced/advanced-mode/).
 
 ## Controls
 
-- `↑ / ↓` — Navigate through the branch list.
-- `Enter` — Switch to the selected branch.
-- `n` — Create a new branch.
-- `d` — Delete the selected branch (cannot delete the current branch).
-- `Esc` — Return to the File View.
-
----
-
-This view allows for efficient branch management within the TUI.
+| Key | Action |
+|-----|--------|
+| `Up` / `Down` | Navigate branches |
+| `Enter` | Switch to the selected branch |
+| `n` | Create a new branch |
+| `d` | Delete the selected branch |
+| `Esc` | Return to the File View |
+| `q` | Quit |

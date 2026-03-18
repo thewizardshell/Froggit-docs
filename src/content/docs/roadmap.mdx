@@ -3,52 +3,62 @@ title: Froggit Roadmap
 template: splash
 ---
 
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a6e824fb-79df-40a0-87c6-d3c55b943935" alt="Froggit Logo" width="900" />
 </p>
 
-Welcome to the official Froggit roadmap.  
-Here we track completed features, what's in progress, and our goals for version 1.0.0.
+Welcome to the official Froggit roadmap. Here you can see what has been built, what is currently being worked on, and where the project is heading.
 
 ---
 
-## ✅ Completed Features
+## Completed
 
-- ✔ Git log viewer (clean, readable history)
-- ✔ Merge support with conflict detection
-- ✔ Rebase flow (interactive)
-- ✔ GitHub CLI integration (requires `gh` installed)
-- ✔ Stash management (create, list, drop)
+Features available in the current release (v1.3.0-beta):
 
----
+**Core workflow.** File staging and unstaging (individual and bulk). Commit with character counter. Push, pull, and fetch. Branch management (create, switch, delete). Remote management (add, remove). File status indicators with color coding. Staged and unstaged file grouping.
 
-## 🚧 In Progress
+**Advanced operations.** Merge with conflict detection and resolution. Rebase with conflict detection and resolution. Stash management (save, apply, pop, drop, view). Interactive log graph with scrollable commit history.
 
-- ☐ Automated tests (for pull requests, merge/rebase)
-- ☐ Configurable TOML file (colors, branding, keybindings)
-- ☐ Self-update via `--update` flag
-- ☐ Optional Vim-style keybindings
-- ☐ Improved error handling and fallback support
+**Diff preview.** Inline, color-coded diff view for any file before staging or committing.
 
----
+**AI integration.** Commit message generation using GitHub Copilot, with no additional setup required beyond an existing subscription.
 
-## 🎯 Goals for v1.0.0
+**GitHub CLI integration.** Clone repositories from your GitHub account. Create new repositories on GitHub. Automatic detection of the GitHub CLI.
 
-- Full support for essential Git operations (log, commit, branch, merge, rebase, stash)
-- Optional customization (theme colors, shortcuts, branding)
-- Lightweight and intuitive interface
-- Zero-crash behavior under normal usage
+**Configuration.** Customizable UI position, branding visibility, auto-fetch behavior, and default branch name through a YAML configuration file.
+
+**Build and distribution.** Static Linux builds compatible with any distribution, including NixOS. Cross-platform binaries for Linux, macOS, and Windows. Automated release pipeline.
+
+**Interface polish.** Context-aware controls bar that adapts to each view. Auto-clearing status messages. Advanced Mode toggle with discoverability hint.
 
 ---
 
-## 📬 Community & Contribution
+## In Progress
 
-- Feature suggestions and feedback are welcome via GitHub Issues
-- Polls and votes on new feature priorities will be available
-- Community contributions to translations, UI, and docs are encouraged
+**Configurable theme and keybindings.** A configuration file format that supports custom color schemes and keybinding overrides, allowing users to personalize the interface.
 
 ---
 
-Want to help shape Froggit?  
-Join the discussion or contribute on [GitHub](https://github.com/thewizardshell/froggit).
+## Planned
+
+**Vim-style keybindings.** An optional keybinding mode that uses Vim conventions (`j`/`k` for navigation, `:` for commands) as an alternative to the default controls.
+
+---
+
+## Goals for v1.0 Stable
+
+The following criteria define what the stable 1.0 release should achieve:
+
+**Complete essential Git coverage.** All common Git operations (stage, commit, branch, merge, rebase, stash, push, pull, fetch, log) fully supported and tested.
+
+**Customization.** Theme colors and keyboard shortcuts configurable through a file.
+
+**Lightweight interface.** Fast startup, minimal resource usage, and a clean design that stays out of the way.
+
+**Stability.** Zero-crash behavior under normal usage conditions.
+
+---
+
+## Community
+
+Feature suggestions and feedback are welcome through [GitHub Issues](https://github.com/thewizardshell/froggit/issues). Contributions to code, documentation, and testing are encouraged.

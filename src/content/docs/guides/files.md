@@ -1,38 +1,58 @@
 ---
 title: File View
-description: Manage and stage modified files in your working directory using Froggit.
+description: Manage and stage modified files in your working directory.
 ---
 
-The **File View** in Froggit displays all the modified files in your Git working directory with useful details and controls for staging, discarding, and navigating files.
+The File View is the main screen in Froggit. It shows all modified files in your Git working directory and provides controls for staging, unstaging, previewing changes, and navigating to other views.
 
-### File List Details
+## File Grouping
 
-Each file is shown with the following elements:
+Files are organized into two sections with visual headers:
 
-- **Modification status checkbox**:  
-  - `[✓]` indicates the file is staged (ready to commit).  
-  - `[ ]` indicates the file is unstaged (not yet staged).  
-- **File icon** representing its type or extension.  
-- **Filename**.  
-- **Cursor indicator (``)** shows the currently selected file.
+**Staged** files appear first, marked with a `[✓]` checkbox. These are ready to be committed.
 
-### Summary
+**Unstaged** files appear below, marked with `[ ]`. These have changes that have not yet been added to the staging area.
 
-At the top, you’ll see a summary showing:
+## File Status Indicators
 
-- Number of files staged for commit.  
-- Number of files modified but not staged.  
-- A warning if new commits are available on the remote repository (suggesting you should pull).
+Each file displays a status indicator next to its name:
 
-### Controls
+| Indicator | Meaning | Color |
+|-----------|---------|-------|
+| `M` | Modified | Orange |
+| `A` | Added (new file) | Green |
+| `D` | Deleted | Magenta |
+| `?` | Untracked | Cyan |
+| `C` | Conflict | Red |
 
-- `↑ / ↓`: Move the selection cursor up or down through the list of files.  
-- `space`: Toggle staging/unstaging the selected file.  
-- `x`: Discard changes on the selected file (only shown if there are modified files).  
-- `c`: Go to the Commit view (only available if there is at least one staged file).  
-- `?`: Show help information.
+## File Icons
 
-### Notes
+When using a terminal with Nerd Fonts, each file displays an icon based on its file extension. This covers common file types including Go, JavaScript, TypeScript, Python, Rust, HTML, CSS, JSON, YAML, Markdown, and many others.
 
-- Additional controls like switching to Branch or Remote views, or push/pull actions, are handled in other views or menus.  
-- The File View focuses on file staging and change discarding before committing.
+## Summary
+
+At the top of the view, a summary shows the number of staged and unstaged files. If new commits are available on the remote repository, a warning appears suggesting you should pull.
+
+## Scrolling
+
+When the file list is longer than the visible area, scroll indicators appear showing how many files are above or below the current viewport. The cursor tracks your position as you navigate.
+
+## Controls
+
+| Key | Action |
+|-----|--------|
+| `Up` / `Down` | Navigate through the file list |
+| `Space` | Stage or unstage the selected file |
+| `a` | Stage all files |
+| `u` | Unstage all staged files |
+| `d` | Open a [diff preview](/advanced/diff-preview/) for the selected file |
+| `x` | Discard changes on the selected file (a confirmation dialog appears) |
+| `c` | Open the [Commit View](/guides/commit/) (only available when files are staged) |
+| `r` | Refresh the file status |
+| `f` | Fetch from the remote |
+| `l` | Pull from the remote |
+| `p` | Push to the remote |
+| `b` | Open the [Branch View](/guides/branches/) |
+| `m` | Open the [Remote View](/guides/remotes/) |
+| `A` | Enter [Advanced Mode](/advanced/advanced-mode/) for merge, rebase, stash, and log operations |
+| `?` | Show help |

@@ -3,18 +3,34 @@ title: Introduction to Froggit
 description: Learn what Froggit is, why it exists, and how it can improve your Git workflow.
 ---
 
-**Froggit** is a modern, keyboard-driven Terminal User Interface (TUI) for Git. Built with simplicity in mind, it aims to streamline your everyday Git tasks without needing to remember complex command-line syntax.
+**Froggit** is a modern, keyboard-driven Terminal User Interface (TUI) for Git. Built with simplicity in mind, it streamlines your everyday Git tasks without requiring you to remember complex command-line syntax.
 
-Whether you're staging files, writing commit messages, switching branches, or pushing to remote — Froggit provides a clean and intuitive interface to help you get the job done quickly and clearly.
+Whether you are staging files, writing commit messages, switching branches, merging, rebasing, or pushing to a remote, Froggit provides a clean and intuitive interface to help you work quickly and clearly.
 
-Inspired by the power of Git and the desire for a smoother workflow, Froggit brings together clarity, speed, and a modern UI experience — all from the comfort of your terminal.
+## What Froggit Can Do
 
-## Why use Froggit?
+Froggit covers the essential Git workflow and extends it with features designed to reduce friction:
 
-- 🚀 **Fast & responsive**: Built in Go for speed.
-- 🎹 **Keyboard-first**: All actions are driven by keyboard shortcuts.
-- 🧠 **No memorization**: Navigate Git actions without remembering commands.
-- ✨ **Clean UI**: See the state of your repo at a glance.
-- 🐸 **For humans**: Friendly design for both beginners and power users.
+**Core operations.** Stage and unstage files individually or all at once. View staged and unstaged files grouped with clear visual headers. Commit changes with a character counter that guides you toward well-formatted messages. Push, pull, and fetch from remote repositories.
 
-Ready to try it? [Install Froggit →](/guides/install/)
+**Branch and remote management.** List, create, delete, and switch branches. Add and remove remotes. All from dedicated views with straightforward controls.
+
+**Advanced Git operations.** Merge and rebase branches with built-in conflict detection. Save, apply, pop, and drop stashes. Browse your commit history through an interactive log graph. Preview file diffs before staging or committing.
+
+**Integrations.** Generate AI-powered commit messages using your existing GitHub Copilot subscription. Clone and create GitHub repositories through the GitHub CLI integration.
+
+**Configuration.** Customize the interface position, branding visibility, auto-fetch behavior, and default branch name through a simple YAML configuration file.
+
+## Why Use Froggit
+
+**Fast and responsive.** Built in Go for speed, with async operations that never block the interface.
+
+**Keyboard first.** Every action is driven by keyboard shortcuts. The controls bar at the bottom of each view always shows what is available.
+
+**No memorization needed.** Context-aware controls guide you through each operation. You do not need to memorize Git commands or Froggit shortcuts.
+
+**Clean interface.** See the state of your repository at a glance. Status messages appear when relevant and clear automatically.
+
+**For everyone.** Designed to be welcoming for beginners while remaining efficient for experienced users.
+
+Ready to try it? Continue to [Installation](/guides/install/).

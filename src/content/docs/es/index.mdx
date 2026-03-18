@@ -1,0 +1,48 @@
+---
+title: Froggit
+description: Un TUI moderno para Git, controlado por teclado, simple, rápido y construido con Go.
+template: splash
+hero:
+  tagline: Un TUI de Git simple y enfocado, diseñado para velocidad y claridad en tu terminal.
+  image:
+    file: ../../../assets/froggit-icon.svg
+  actions:
+    - text: Comenzar
+      link: /es/guides/install/
+      icon: right-arrow
+    - text: GitHub
+      link: https://github.com/thewizardshell/froggit
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## Explora Froggit
+
+<Card title="Vista Previa" icon="seti:powershell">
+  <img
+    src="/preview.gif"
+    alt="Vista previa animada de Froggit en acción"
+    width="100%"
+  />
+</Card>
+
+<CardGrid stagger>
+  <Card title="Comenzar" icon="rocket">
+    Instala Froggit rápidamente y comienza a gestionar tus repositorios Git con facilidad.
+  </Card>
+  <Card title="Funcionalidades" icon="star">
+    Staging, commit, push y cambio de ramas, todo con una interfaz de terminal limpia e intuitiva.
+  </Card>
+  <Card title="Controlado por Teclado" icon="pencil">
+    Navega y opera Froggit eficientemente usando solo tu teclado, sin necesidad de ratón.
+  </Card>
+  <Card title="Construido con Go" icon="seti:go">
+    Desarrollado en Go usando bibliotecas TUI modernas como <strong>Bubbletea</strong>,{" "}
+    <strong>Lipgloss</strong> y <strong>Bubbles</strong>, garantizando rendimiento y elegancia en cada interacción.
+  </Card>
+  <Card title="Open Source" icon="github">
+    Explora el código fuente en GitHub y contribuye a hacer Froggit aún mejor.
+  </Card>
+</CardGrid>
