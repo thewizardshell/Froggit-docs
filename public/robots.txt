@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://froggit-docs.vercel.app/sitemap-index.xml
